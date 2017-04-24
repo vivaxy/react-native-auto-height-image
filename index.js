@@ -25,7 +25,7 @@ export default class AutoHeightImage extends Component {
         super(props);
         const { imageURL, width } = props;
         const { height = DEFAULT_HEIGHT } = getImageSizeFitWidthFromCache(imageURL, width);
-        const hasLoaded = height !== null;
+        const hasLoaded = height !== DEFAULT_HEIGHT;
         this.state = {
             height,
         };
