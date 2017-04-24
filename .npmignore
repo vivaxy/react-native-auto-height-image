@@ -1,0 +1,14 @@
+/assets
+/.idea
+node_modules
+.DS_Store
+npm-debug.log
+/scripts
+/src
+/test
+/.babelrc
+/.editorconfig
+/.eslintrc
+.nyc_output
+coverage
+/coverage.lcov

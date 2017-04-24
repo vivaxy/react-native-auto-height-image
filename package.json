@@ -1,0 +1,34 @@
+{
+  "name": "react-native-auto-height-image",
+  "version": "0.0.0",
+  "gtScaffoldVersion": "0.1.0",
+  "description": "react-native auto height image",
+  "main": "./index.js",
+  "scripts": {
+    "release": "standard-version && git push --follow-tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vivaxy/react-native-auto-height-image.git"
+  },
+  "keywords": [
+    "react-native",
+    "image",
+    "auto-height"
+  ],
+  "author": "vivaxy",
+  "license": "MIT",
+  "bugs": {},
+  "dependencies": {
+    "prop-types": "^15.5.8"
+  },
+  "devDependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-native": "^0.43.4",
+    "standard-version": "^4.0.0"
+  },
+  "peerDependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-native": "^0.43.4"
+  }
+}
