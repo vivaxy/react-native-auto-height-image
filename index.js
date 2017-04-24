@@ -11,12 +11,14 @@ import { getImageSizeFitWidth, getImageSizeFitWidthFromCache } from './cache';
 
 const DEFAULT_HEIGHT = 0;
 
+const { source, resizeMode, ...autoHeightImagePropTypes } = Image.propTypes;
+
 export default class AutoHeightImage extends Component {
 
     static propTypes = {
+        ...autoHeightImagePropTypes,
         width: PropTypes.number.isRequired,
         imageURL: PropTypes.string.isRequired,
-        style: Image.propTypes.style,
     };
 
     constructor(props) {
@@ -62,11 +64,12 @@ export default class AutoHeightImage extends Component {
     }
 
     render() {
-        const { imageURL, style } = this.props;
+        const { imageURL, style, width, ...restProps } = this.props;
         return (
             <Image
                 source={{ uri: imageURL }}
                 style={[this.styles.image, style]}
+                {...restProps}
             />
         );
     }

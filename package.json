@@ -28,7 +28,7 @@
     "standard-version": "^4.0.0"
   },
   "peerDependencies": {
-    "react": "16.0.0-alpha.6",
-    "react-native": "^0.43.4"
+    "react": "*",
+    "react-native": "*"
   }
 }
