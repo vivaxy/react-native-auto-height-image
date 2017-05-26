@@ -2,6 +2,10 @@
 
 Initialized by [vivaxy/gt-npm-package](https://github.com/vivaxy/gt-npm-package)
 
+This component provides you a simple way to load a remote image and automatically set `Image` height to the image dimension which fits the provided width.
+
+ReactNative `Image` component needs users to set both `width` and `height` props.
+
 ## USAGE
 
 `yarn add react-native-auto-height-image`
@@ -21,3 +25,12 @@ export default class Demo extends Component {
     }
 }
 ```
+
+## props
+
+| name          | type      | isRequired    | default   | description           |
+| ---           | ---       | ---           | ---       | ---                   |
+| `width`       | number    | ✔             | N/A       | image width to fit    |
+| `imageURL`    | string    | ✔             | N/A       | remote image url      |
+
+Other image props except `source` and `resizeMode` are accepted.
