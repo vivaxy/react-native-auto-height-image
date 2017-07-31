@@ -3,64 +3,68 @@
  * @author vivaxy
  */
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Image, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { getImageSizeFitWidth, getImageSizeFitWidthFromCache } from './cache';
+import { NOOP } from './helpers';
 
 const DEFAULT_HEIGHT = 0;
 
 const { source, resizeMode, ...autoHeightImagePropTypes } = Image.propTypes;
 
-export default class AutoHeightImage extends Component {
+export default class AutoHeightImage extends PureComponent {
 
     static propTypes = {
         ...autoHeightImagePropTypes,
         width: PropTypes.number.isRequired,
         imageURL: PropTypes.string.isRequired,
+        onHeightChange: PropTypes.func,
+    };
+
+    static defaultProps = {
+        onHeightChange: NOOP,
     };
 
     constructor(props) {
         super(props);
-        const { imageURL, width } = props;
-        const { height = DEFAULT_HEIGHT } = getImageSizeFitWidthFromCache(imageURL, width);
-        const hasLoaded = height !== DEFAULT_HEIGHT;
-        this.state = {
-            height,
-        };
-        this.hasLoaded = hasLoaded;
-        this.styles = StyleSheet.create({
-            image: {
-                width,
-                height,
-            },
-        });
+        this.setInitialImageHeight();
     }
 
     async componentDidMount() {
         this.hasMounted = true;
+        await this.updateImageHeight(this.props);
+    }
 
-        if (!this.hasLoaded) {
-            const { imageURL, width } = this.props;
-            const { height } = await getImageSizeFitWidth(imageURL, width);
-            this.hasLoaded = true;
-            this.styles = StyleSheet.create({
-                image: {
-                    width,
-                    height,
-                },
-            });
-            if (this.hasMounted) {
-                this.setState({
-                    height,
-                });
-            }
-        }
+    async componentWillReceiveProps(nextProps) {
+        await this.updateImageHeight(nextProps);
     }
 
     componentWillUnmount() {
         this.hasMounted = false;
+    }
+
+    setInitialImageHeight() {
+        const { imageURL, width, onHeightChange } = props;
+        const { height = DEFAULT_HEIGHT } = getImageSizeFitWidthFromCache(imageURL, width);
+        this.state = { height };
+        this.styles = StyleSheet.create({ image: { width, height } });
+        onHeightChange(height);
+    }
+
+    async updateImageHeight(props) {
+        if (this.state.height === DEFAULT_HEIGHT) {
+            // image height could not be `0`
+            const { imageURL, width, onHeightChange } = props;
+            const { height } = await getImageSizeFitWidth(imageURL, width);
+            this.styles = StyleSheet.create({ image: { width, height } });
+            if (this.hasMounted) {
+                // guard `this.setState` to be valid
+                this.setState({ height });
+                onHeightChange(height);
+            }
+        }
     }
 
     render() {
