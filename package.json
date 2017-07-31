@@ -1,6 +1,6 @@
 {
   "name": "react-native-auto-height-image",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "gtScaffoldVersion": "0.1.0",
   "description": "react-native auto height image",
   "main": "./index.js",
