@@ -28,9 +28,10 @@ export default class Demo extends Component {
 
 ## props
 
-| name          | type      | isRequired    | default   | description           |
-| ---           | ---       | ---           | ---       | ---                   |
-| `width`       | number    | ✔             | N/A       | image width to fit    |
-| `imageURL`    | string    | ✔             | N/A       | remote image url      |
+| name              | type      | isRequired    | default           | description                                                           |
+| ---               | ---       | ---           | ---               | ---                                                                   |
+| `width`           | number    | ✔             | N/A               | image width to fit                                                    |
+| `imageURL`        | string    | ✔             | N/A               | remote image url                                                      |
+| `onHeightChange`  | func      | ✖             | (height) => {}    | called when updating image height, the argument `height` might be `0` |
 
 Other image props except `source` and `resizeMode` are accepted.
