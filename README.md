@@ -2,6 +2,8 @@
 
 Initialized by [vivaxy/gt-npm-package](https://github.com/vivaxy/gt-npm-package)
 
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
 This component provides you a simple way to load a remote image and automatically set `Image` height to the image dimension which fits the provided width.
 
 ReactNative `Image` component needs users to set both `width` and `height` props.
@@ -26,7 +28,7 @@ export default class Demo extends Component {
 }
 ```
 
-## props
+### props
 
 | name              | type      | isRequired    | default           | description                                                           |
 | ---               | ---       | ---           | ---               | ---                                                                   |
@@ -35,3 +37,8 @@ export default class Demo extends Component {
 | `onHeightChange`  | func      | ✖             | (height) => {}    | called when updating image height, the argument `height` might be `0` |
 
 Other image props except `source` and `resizeMode` are accepted.
+
+## Contribute
+
+- Git commit with [Conventional Commits](https://conventionalcommits.org/).
+- Bump version and publish with `npm run release`
