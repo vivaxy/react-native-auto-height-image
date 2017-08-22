@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.2"></a>
+## [0.3.2](https://github.com/vivaxy/react-native-auto-height-image/compare/v0.3.1...v0.3.2) (2017-08-22)
+
+
+### Bug Fixes
+
+* **rejection:** :bug:Fix `Possible Unhandled Promise Rejection` warning. ([02441ba](https://github.com/vivaxy/react-native-auto-height-image/commit/02441ba)), closes [#4](https://github.com/vivaxy/react-native-auto-height-image/issues/4)
+
+
+
 <a name="0.3.1"></a>
 ## [0.3.1](https://github.com/vivaxy/react-native-auto-height-image/compare/v0.3.0...v0.3.1) (2017-08-08)
 
