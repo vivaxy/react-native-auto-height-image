@@ -8,9 +8,7 @@ import { Image, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { getImageSizeFitWidth, getImageSizeFitWidthFromCache } from './cache';
-import { NOOP } from './helpers';
-
-const DEFAULT_HEIGHT = 0;
+import { NOOP, DEFAULT_HEIGHT } from './helpers';
 
 // remove `source`, `resizeMode` props from `autoHeightImagePropTypes`
 const { source, resizeMode, ...autoHeightImagePropTypes } = Image.propTypes;
@@ -58,12 +56,16 @@ export default class AutoHeightImage extends PureComponent {
         if (this.state.height === DEFAULT_HEIGHT) {
             // image height could not be `0`
             const { imageURL, width, onHeightChange } = props;
-            const { height } = await getImageSizeFitWidth(imageURL, width);
-            this.styles = StyleSheet.create({ image: { width, height } });
-            if (this.hasMounted) {
-                // guard `this.setState` to be valid
-                this.setState({ height });
-                onHeightChange(height);
+            try {
+                const { height } = await getImageSizeFitWidth(imageURL, width);
+                this.styles = StyleSheet.create({ image: { width, height } });
+                if (this.hasMounted) {
+                    // guard `this.setState` to be valid
+                    this.setState({ height });
+                    onHeightChange(height);
+                }
+            } catch (ex) {
+                // Might be Image.getSize error, we ignore it here.
             }
         }
     }

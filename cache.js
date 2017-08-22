@@ -20,16 +20,11 @@ const getImageSizeFromCache = (imageURL) => {
 };
 
 const loadImageSize = (imageURL) => {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         Image.getSize(imageURL, (width, height) => {
             // success
             resolve({ width, height });
-        }, () => {
-            // error
-            // reject(err);
-            // not rejecting err, send a resolve instead
-            resolve({ width: 0, height: 0 });
-        });
+        }, reject);
     });
 };
 
@@ -37,10 +32,7 @@ export const getImageSizeFitWidthFromCache = (imageURL, toWidth) => {
     const size = getImageSizeFromCache(imageURL);
     if (size) {
         const { width, height } = size;
-        return {
-            width: toWidth,
-            height: toWidth * height / width,
-        };
+        return { width: toWidth, height: toWidth * height / width };
     }
     return {};
 };
@@ -56,8 +48,5 @@ const getImageSizeMaybeFromCache = async(imageURL) => {
 
 export const getImageSizeFitWidth = async(imageURL, toWidth) => {
     const { width, height } = await getImageSizeMaybeFromCache(imageURL);
-    return {
-        width: toWidth,
-        height: toWidth * height / width,
-    };
+    return { width: toWidth, height: toWidth * height / width };
 };

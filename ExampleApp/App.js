@@ -1,34 +1,41 @@
 import React, { Component } from 'react';
 import AutoHeightImage from 'react-native-auto-height-image';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, ScrollView } from 'react-native';
 
 export default class App extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <ScrollView style={styles.scrollViewContainer} contentContainerStyle={styles.scrollViewContentContainer}>
                 <Text>Basic example</Text>
                 <AutoHeightImage
                     width={100}
                     imageURL={'http://placehold.it/350x150'}
                 />
+                <Text>Basic example</Text>
+                <AutoHeightImage
+                    width={200}
+                    imageURL={'http://placehold.it/350x150'}
+                />
                 <Text>Wrong imageURL</Text>
                 <AutoHeightImage
                     width={100}
-                    imageURL={'abcdefg'}
+                    imageURL={'https://vivaxy.github.io/404'}
                     onError={(error) => {
-                        console.log(error);
+                        console.log('----- onError', error);
                     }}
                 />
-            </View>
+            </ScrollView>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
+    scrollViewContainer: {
         flex: 1,
         backgroundColor: '#fff',
+        marginTop: 20,
+    },
+    scrollViewContentContainer: {
         alignItems: 'center',
-        justifyContent: 'center',
     },
 });
