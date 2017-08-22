@@ -20,13 +20,15 @@ const getImageSizeFromCache = (imageURL) => {
 };
 
 const loadImageSize = (imageURL) => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         Image.getSize(imageURL, (width, height) => {
             // success
             resolve({ width, height });
-        }, (err) => {
+        }, () => {
             // error
-            reject(err);
+            // reject(err);
+            // not rejecting err, send a resolve instead
+            resolve({ width: 0, height: 0 });
         });
     });
 };
