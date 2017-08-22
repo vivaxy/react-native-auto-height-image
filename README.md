@@ -11,9 +11,13 @@ This component provides you a simple way to load a remote image and automaticall
 
 ReactNative `Image` component needs users to set both `width` and `height` props.
 
-## USAGE
+## Installation
 
 `yarn add react-native-auto-height-image`
+
+`npm install react-native-auto-height-image`
+
+## Usage
 
 ```js
 import React, { Component } from 'react';
@@ -31,7 +35,7 @@ export default class Demo extends Component {
 }
 ```
 
-### props
+### Props
 
 | name              | type      | isRequired    | default           | description                                                           |
 | ---               | ---       | ---           | ---               | ---                                                                   |
@@ -48,3 +52,7 @@ Other image props except `source` and `resizeMode` are accepted.
 ## Contributing
 
 [Contributing](./CONTRIBUTING.md)
+
+## Licence
+
+[MIT](./LICENSE)
