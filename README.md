@@ -38,7 +38,6 @@ export default class Demo extends Component {
 
 Other image props except `source` and `resizeMode` are accepted.
 
-## Contribute
+## Contributing
 
-- Git commit with [Conventional Commits](https://conventionalcommits.org/).
-- Bump version and publish with `npm run release`
+[Contributing](CONTRIBUTING.md)

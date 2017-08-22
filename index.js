@@ -12,6 +12,7 @@ import { NOOP } from './helpers';
 
 const DEFAULT_HEIGHT = 0;
 
+// remove `source`, `resizeMode` props from `autoHeightImagePropTypes`
 const { source, resizeMode, ...autoHeightImagePropTypes } = Image.propTypes;
 
 export default class AutoHeightImage extends PureComponent {
@@ -68,6 +69,7 @@ export default class AutoHeightImage extends PureComponent {
     }
 
     render() {
+        // remove `width` prop from `restProps`
         const { imageURL, style, width, ...restProps } = this.props;
         return (
             <Image
