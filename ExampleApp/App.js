@@ -19,7 +19,6 @@ export default class App extends Component {
                         console.log(error);
                     }}
                 />
-                <Text>Shake your phone to open the developer menu.</Text>
             </View>
         );
     }
