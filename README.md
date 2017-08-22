@@ -38,6 +38,10 @@ export default class Demo extends Component {
 
 Other image props except `source` and `resizeMode` are accepted.
 
+## Change Log
+
+[Change log](./CHANGELOG.md)
+
 ## Contributing
 
-[Contributing](CONTRIBUTING.md)
+[Contributing](./CONTRIBUTING.md)
