@@ -53,7 +53,10 @@ export default class AutoHeightImage extends PureComponent {
     }
 
     async updateImageHeight(props) {
-        if (this.state.height === DEFAULT_HEIGHT) {
+        if (
+            this.state.height === DEFAULT_HEIGHT ||
+            this.props.width !== props.width
+        ) {
             // image height could not be `0`
             const { imageURL, width, onHeightChange } = props;
             try {
