@@ -1,19 +1,38 @@
 import React, { Component } from 'react';
 import AutoHeightImage from 'react-native-auto-height-image';
-import { StyleSheet, Text, ScrollView } from 'react-native';
+import { StyleSheet, Text, ScrollView, TextInput } from 'react-native';
 
 export default class App extends Component {
+
+    state = {
+        dynamicWidth: 200,
+    };
+
+    handleTextInputChange = (text) => {
+        const width = Number(text);
+        if (!Number.isNaN(width)) {
+            this.setState({ dynamicWidth: width });
+        }
+    };
+
     render() {
+        const { dynamicWidth } = this.state;
         return (
             <ScrollView style={styles.scrollViewContainer} contentContainerStyle={styles.scrollViewContentContainer}>
+                <TextInput
+                    value={String(dynamicWidth)}
+                    keyboardType="numeric"
+                    style={styles.textInputStyle}
+                    onChangeText={this.handleTextInputChange}
+                />
                 <Text>Basic example</Text>
                 <AutoHeightImage
                     width={100}
                     imageURL={'http://placehold.it/350x150'}
                 />
-                <Text>Basic example</Text>
+                <Text>Basic example with dynamic width</Text>
                 <AutoHeightImage
-                    width={200}
+                    width={dynamicWidth}
                     imageURL={'http://placehold.it/350x150'}
                 />
                 <Text>Wrong imageURL</Text>
@@ -37,5 +56,13 @@ const styles = StyleSheet.create({
     },
     scrollViewContentContainer: {
         alignItems: 'center',
+        paddingTop: 100,
+    },
+    textInputStyle: {
+        width: 300,
+        height: 30,
+        borderStyle: 'solid',
+        borderColor: '#eee',
+        borderWidth: 1,
     },
 });
