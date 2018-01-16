@@ -69,7 +69,9 @@ export default class AutoHeightImage extends PureComponent {
                     onHeightChange(height);
                 }
             } catch (ex) {
-                // Might be Image.getSize error, we ignore it here.
+                if (this.props.onError) {
+                  this.props.onError(ex);
+                }
             }
         }
     }
