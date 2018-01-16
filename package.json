@@ -5,7 +5,7 @@
   "description": "react-native auto height image",
   "main": "./index.js",
   "scripts": {
-    "release": "standard-version && git push --follow-tags && npm publish"
+    "release": "standard-version && git push --follow-tags && npm publish --registry=https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
