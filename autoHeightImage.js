@@ -19,7 +19,10 @@ export default class AutoHeightImage extends PureComponent {
     static propTypes = {
         ...autoHeightImagePropTypes,
         width: PropTypes.number.isRequired,
-        imageURL: PropTypes.string.isRequired,
+        image: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.number,
+        ]).isRequired,
         onHeightChange: PropTypes.func,
     };
 
@@ -59,9 +62,9 @@ export default class AutoHeightImage extends PureComponent {
             this.props.width !== props.width
         ) {
             // image height could not be `0`
-            const { imageURL, width, onHeightChange } = props;
+            const { image, width, onHeightChange } = props;
             try {
-                const { height } = await getImageSizeFitWidth(imageURL, width);
+                const { height } = await getImageSizeFitWidth(image, width);
                 this.styles = StyleSheet.create({ image: { width, height } });
                 if (this.hasMounted) {
                     // guard `this.setState` to be valid
@@ -78,10 +81,11 @@ export default class AutoHeightImage extends PureComponent {
 
     render() {
         // remove `width` prop from `restProps`
-        const { imageURL, style, width, ...restProps } = this.props;
+        const { image, style, width, ...restProps } = this.props;
+        const source = typeof(image) == 'number' ? image : { uri: image };
         return (
             <Image
-                source={{ uri: imageURL }}
+                source={source}
                 style={[this.styles.image, style]}
                 {...restProps}
             />

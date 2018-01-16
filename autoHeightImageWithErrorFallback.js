@@ -1,10 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 import AutoHeightImage from './autoHeightImage';
 
 
 class ErrorableImage extends React.Component {
+
+  static propTypes = {
+      ...AutoHeightImage.propTypes,
+      errorImage: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+      ]),
+  };
+
+
   constructor(props) {
     super(props);
     this.state = {
@@ -14,15 +25,15 @@ class ErrorableImage extends React.Component {
 
   render() {
     const {
-      imageURL,
-      errorImageURL,
+      image,
+      errorImage,
       onError,
       ...restProps,
     } = this.props;
 
     return (
       <AutoHeightImage
-        imageURL={this.state.error ? errorImageURL : imageURL}
+        image={this.state.error ? errorImage : image}
         onError={(error) => {
           //if an error hasn't already been seen, try to load the error image
           //instead
