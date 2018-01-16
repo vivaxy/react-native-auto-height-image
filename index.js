@@ -4,7 +4,8 @@
  */
 
 import React, { PureComponent } from 'react';
-import { Image, StyleSheet } from 'react-native';
+import Image from 'react-native-android-image-polyfill';
+import { StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { getImageSizeFitWidth, getImageSizeFitWidthFromCache } from './cache';

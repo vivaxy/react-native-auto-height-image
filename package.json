@@ -20,7 +20,8 @@
   "license": "MIT",
   "bugs": {},
   "dependencies": {
-    "prop-types": "^15.5.8"
+    "prop-types": "^15.5.8",
+    "react-native-android-image-polyfill": "^1.0.0"
   },
   "devDependencies": {
     "react": "16.0.0-alpha.6",
