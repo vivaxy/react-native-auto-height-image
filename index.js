@@ -70,7 +70,7 @@ export default class AutoHeightImage extends PureComponent {
                 }
             } catch (ex) {
                 if (this.props.onError) {
-                  this.props.onError(ex);
+                    this.props.onError(ex);
                 }
             }
         }
