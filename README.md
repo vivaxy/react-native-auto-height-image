@@ -28,7 +28,27 @@ export default class Demo extends Component {
         return (
             <AutoHeightImage
                 width={100}
-                imageURL={'http://placehold.it/350x150'}
+                image={'http://placehold.it/350x150'}
+            />
+        );
+    }
+}
+```
+
+You can even use local files:
+
+```js
+import React, { Component } from 'react';
+import AutoHeightImage from 'react-native-auto-height-image';
+
+import image from 'gallifrey-falls.png'
+
+export default class Demo extends Component {
+    render() {
+        return (
+            <AutoHeightImage
+                width={100}
+                image={image}
             />
         );
     }
@@ -37,11 +57,11 @@ export default class Demo extends Component {
 
 ### Props
 
-| name              | type      | isRequired    | default           | description                                                           |
-| ---               | ---       | ---           | ---               | ---                                                                   |
-| `width`           | number    | ✔             | N/A               | image width to fit                                                    |
-| `imageURL`        | string    | ✔             | N/A               | remote image url                                                      |
-| `onHeightChange`  | func      | ✖             | (height) => {}    | called when updating image height, the argument `height` might be `0` |
+| name              | type             | isRequired    | default           | description                                                           |
+| ---               | ---              | ---           | ---               | ---                                                                   |
+| `width`           | number           | ✔             | N/A               | image width to fit                                                    |
+| `image`           | string or number | ✔             | N/A               | remote image url                                                      |
+| `onHeightChange`  | func             | ✖             | (height) => {}    | called when updating image height, the argument `height` might be `0` |
 
 Other image props except `source` and `resizeMode` are accepted.
 
