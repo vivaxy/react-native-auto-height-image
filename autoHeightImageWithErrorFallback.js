@@ -28,9 +28,10 @@ class ErrorableImage extends React.Component {
       ...restProps,
     } = this.props;
 
+    const shouldUseFallbackSource = (this.state.error && fallbackSource);
     return (
       <AutoHeightImage
-        source={this.state.error ? fallbackSource : source}
+        source={shouldUseFallbackSource ? fallbackSource : source}
         onError={(error) => {
           //if an error hasn't already been seen, try to load the error image
           //instead
