@@ -1,11 +1,11 @@
 {
   "name": "react-native-auto-height-image",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "gtScaffoldVersion": "0.1.0",
   "description": "react-native auto height image",
   "main": "./index.js",
   "scripts": {
-    "release": "standard-version && git push --follow-tags && npm publish"
+    "release": "standard-version && git push --follow-tags && npm publish --registry=https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
