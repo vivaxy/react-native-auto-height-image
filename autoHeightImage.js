@@ -11,18 +11,14 @@ import PropTypes from 'prop-types';
 import { getImageSizeFitWidth, getImageSizeFitWidthFromCache } from './cache';
 import { NOOP, DEFAULT_HEIGHT } from './helpers';
 
-// remove `source`, `resizeMode` props from `autoHeightImagePropTypes`
-const { source, resizeMode, ...autoHeightImagePropTypes } = Image.propTypes;
+// remove `resizeMode` props from `Image.propTypes`
+const { resizeMode, ...ImagePropTypes } = Image.propTypes;
 
 export default class AutoHeightImage extends PureComponent {
 
     static propTypes = {
-        ...autoHeightImagePropTypes,
+        ...ImagePropTypes,
         width: PropTypes.number.isRequired,
-        image: PropTypes.oneOfType([
-          PropTypes.string,
-          PropTypes.number,
-        ]).isRequired,
         onHeightChange: PropTypes.func,
     };
 
@@ -49,8 +45,8 @@ export default class AutoHeightImage extends PureComponent {
     }
 
     setInitialImageHeight() {
-        const { image, width, onHeightChange } = this.props;
-        const { height = DEFAULT_HEIGHT } = getImageSizeFitWidthFromCache(image, width);
+        const { source, width, onHeightChange } = this.props;
+        const { height = DEFAULT_HEIGHT } = getImageSizeFitWidthFromCache(source, width);
         this.state = { height };
         this.styles = StyleSheet.create({ image: { width, height } });
         onHeightChange(height);
@@ -62,9 +58,9 @@ export default class AutoHeightImage extends PureComponent {
             this.props.width !== props.width
         ) {
             // image height could not be `0`
-            const { image, width, onHeightChange } = props;
+            const { source, width, onHeightChange } = props;
             try {
-                const { height } = await getImageSizeFitWidth(image, width);
+                const { height } = await getImageSizeFitWidth(source, width);
                 this.styles = StyleSheet.create({ image: { width, height } });
                 if (this.hasMounted) {
                     // guard `this.setState` to be valid
@@ -81,8 +77,7 @@ export default class AutoHeightImage extends PureComponent {
 
     render() {
         // remove `width` prop from `restProps`
-        const { image, style, width, ...restProps } = this.props;
-        const source = typeof(image) == 'number' ? image : { uri: image };
+        const { source, style, width, ...restProps } = this.props;
         return (
             <Image
                 source={source}

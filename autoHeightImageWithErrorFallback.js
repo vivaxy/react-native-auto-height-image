@@ -9,10 +9,7 @@ class ErrorableImage extends React.Component {
 
   static propTypes = {
       ...AutoHeightImage.propTypes,
-      errorImage: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-      ]),
+      fallbackSource: AutoHeightImage.propTypes.source,
   };
 
 
@@ -25,15 +22,15 @@ class ErrorableImage extends React.Component {
 
   render() {
     const {
-      image,
-      errorImage,
+      source,
+      fallbackSource,
       onError,
       ...restProps,
     } = this.props;
 
     return (
       <AutoHeightImage
-        image={this.state.error ? errorImage : image}
+        source={this.state.error ? fallbackSource : source}
         onError={(error) => {
           //if an error hasn't already been seen, try to load the error image
           //instead
