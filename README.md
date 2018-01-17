@@ -19,36 +19,50 @@ ReactNative `Image` component needs users to set both `width` and `height` props
 
 ## Usage
 
+Use local or remote files:
+
 ```js
 import React, { Component } from 'react';
 import AutoHeightImage from 'react-native-auto-height-image';
 
+import image from 'gallifrey-falls.png';
+
 export default class Demo extends Component {
     render() {
         return (
-            <AutoHeightImage
-                width={100}
-                image={'http://placehold.it/350x150'}
-            />
+            <View>
+
+                <AutoHeightImage
+                    width={100}
+                    source={image}
+                />
+
+                <AutoHeightImage
+                    width={100}
+                    source={{uri: 'http://placehold.it/350x150'}}
+                />
+
+            </View>
         );
     }
 }
 ```
 
-You can even use local files:
+You can even specify fallback images for when the source fails to load:
 
 ```js
 import React, { Component } from 'react';
 import AutoHeightImage from 'react-native-auto-height-image';
 
-import image from 'gallifrey-falls.png'
+import image from 'gallifrey-falls.png';
 
 export default class Demo extends Component {
     render() {
         return (
             <AutoHeightImage
                 width={100}
-                image={image}
+                source={{uri: 'https://vivaxy.github.io/404'}}
+                fallbackSource={image}
             />
         );
     }
@@ -57,13 +71,14 @@ export default class Demo extends Component {
 
 ### Props
 
-| name              | type             | isRequired    | default           | description                                                           |
-| ---               | ---              | ---           | ---               | ---                                                                   |
-| `width`           | number           | ✔             | N/A               | image width to fit                                                    |
-| `image`           | string or number | ✔             | N/A               | remote image url                                                      |
-| `onHeightChange`  | func             | ✖             | (height) => {}    | called when updating image height, the argument `height` might be `0` |
+| name               | type             | isRequired    | default           | description                                                           |
+| ---                | ---              | ---           | ---               | ---                                                                   |
+| `width`            | number           | ✔             | N/A               | image width to fit                                                    |
+| `source`           | number or object | ✔             | N/A               | local (i.e. require/import) or remote image ({uri: '...'})            |
+| `fallbackSource`   | number or object | ✖             | N/A               | local (i.e. require/import) or remote image ({uri: '...'})            |
+| `onHeightChange`   | func             | ✖             | (height) => {}    | called when updating image height, the argument `height` might be `0` |
 
-Other image props except `source` and `resizeMode` are accepted.
+Other image props except `resizeMode` are accepted.
 
 ## Change Log
 
