@@ -19,7 +19,11 @@ import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource'
 const cache = new Map();
 
 const getImageSizeFromCache = (image) => {
+  if (typeof(image) == 'number') {
     return cache.get(image);
+  } else {
+    return cache.get(image.uri);
+  }
 };
 
 const loadImageSize = (image) => {
