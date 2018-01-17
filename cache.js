@@ -29,7 +29,7 @@ const loadImageSize = (image) => {
         const { width, height } = resolveAssetSource(image)
         resolve({ width, height });
       } else {
-        Image.getSize(image, (width, height) => {
+        Image.getSize(image.uri, (width, height) => {
             // success
             resolve({ width, height });
         }, reject);
