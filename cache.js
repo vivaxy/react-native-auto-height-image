@@ -4,8 +4,8 @@
  */
 
 import { Image } from 'react-native';
-//undocumented but part of react-native; see
-//https://github.com/facebook/react-native/issues/5603#issuecomment-297959695
+// undocumented but part of react-native; see
+// https://github.com/facebook/react-native/issues/5603#issuecomment-297959695
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
 
 /**
@@ -19,26 +19,25 @@ import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource'
 const cache = new Map();
 
 const getImageSizeFromCache = (image) => {
-  if (typeof(image) == 'number') {
-    return cache.get(image);
-  } else {
-    return cache.get(image.uri);
-  }
+    if (typeof image === 'number') {
+        return cache.get(image);
+    } else {
+        return cache.get(image.uri);
+    }
 };
 
 const loadImageSize = (image) => {
     return new Promise((resolve, reject) => {
-      //number indicates import X or require(X) was used (i.e. local file)
-      if (typeof(image) == 'number') {
-        const { width, height } = resolveAssetSource(image)
-        resolve({ width, height });
-      } else {
-        Image.getSize(image.uri, (width, height) => {
-            // success
+        //number indicates import X or require(X) was used (i.e. local file)
+        if (typeof image === 'number') {
+            const { width, height } = resolveAssetSource(image);
             resolve({ width, height });
-        }, reject);
-      }
-
+        } else {
+            Image.getSize(image.uri, (width, height) => {
+                // success
+                resolve({ width, height });
+            }, reject);
+        }
     });
 };
 
