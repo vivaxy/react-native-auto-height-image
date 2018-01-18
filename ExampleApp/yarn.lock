@@ -4537,9 +4537,9 @@ react-native-android-image-polyfill@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-native-android-image-polyfill/-/react-native-android-image-polyfill-1.0.0.tgz#f0b61bac0c6a91b8f8f81233ab1998613adf64ac"
 
-react-native-auto-height-image@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/react-native-auto-height-image/-/react-native-auto-height-image-0.4.1.tgz#fd5bee549878f77af7b84cd5dcce4758e2a56f59"
+react-native-auto-height-image@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-auto-height-image/-/react-native-auto-height-image-1.0.0.tgz#24d0ef98fc4c25ef46a7d915b885bc556477cdb9"
   dependencies:
     prop-types "^15.5.8"
     react-native-android-image-polyfill "^1.0.0"
