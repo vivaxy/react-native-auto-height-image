@@ -4,10 +4,13 @@
  */
 
 import { Image } from 'react-native';
+//undocumented but part of react-native; see
+//https://github.com/facebook/react-native/issues/5603#issuecomment-297959695
+import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
 
 /**
  * store with
- *  key: imageURL
+ *  key: image
  *  value: {
  *      width: 100,
  *      height: 100,
@@ -15,21 +18,32 @@ import { Image } from 'react-native';
  */
 const cache = new Map();
 
-const getImageSizeFromCache = (imageURL) => {
-    return cache.get(imageURL);
+const getImageSizeFromCache = (image) => {
+  if (typeof(image) == 'number') {
+    return cache.get(image);
+  } else {
+    return cache.get(image.uri);
+  }
 };
 
-const loadImageSize = (imageURL) => {
+const loadImageSize = (image) => {
     return new Promise((resolve, reject) => {
-        Image.getSize(imageURL, (width, height) => {
+      //number indicates import X or require(X) was used (i.e. local file)
+      if (typeof(image) == 'number') {
+        const { width, height } = resolveAssetSource(image)
+        resolve({ width, height });
+      } else {
+        Image.getSize(image.uri, (width, height) => {
             // success
             resolve({ width, height });
         }, reject);
+      }
+
     });
 };
 
-export const getImageSizeFitWidthFromCache = (imageURL, toWidth) => {
-    const size = getImageSizeFromCache(imageURL);
+export const getImageSizeFitWidthFromCache = (image, toWidth) => {
+    const size = getImageSizeFromCache(image);
     if (size) {
         const { width, height } = size;
         return { width: toWidth, height: toWidth * height / width };
@@ -37,16 +51,16 @@ export const getImageSizeFitWidthFromCache = (imageURL, toWidth) => {
     return {};
 };
 
-const getImageSizeMaybeFromCache = async(imageURL) => {
-    let size = getImageSizeFromCache(imageURL);
+const getImageSizeMaybeFromCache = async(image) => {
+    let size = getImageSizeFromCache(image);
     if (!size) {
-        size = await loadImageSize(imageURL);
-        cache.set(imageURL, size);
+        size = await loadImageSize(image);
+        cache.set(image, size);
     }
     return size;
 };
 
-export const getImageSizeFitWidth = async(imageURL, toWidth) => {
-    const { width, height } = await getImageSizeMaybeFromCache(imageURL);
+export const getImageSizeFitWidth = async(image, toWidth) => {
+    const { width, height } = await getImageSizeMaybeFromCache(image);
     return { width: toWidth, height: toWidth * height / width };
 };
