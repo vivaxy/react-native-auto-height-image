@@ -4533,11 +4533,16 @@ react-devtools-core@^2.5.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-react-native-auto-height-image@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/react-native-auto-height-image/-/react-native-auto-height-image-0.3.3.tgz#c8c39478528ad8fefef37b63b72834733b505faf"
+react-native-android-image-polyfill@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-android-image-polyfill/-/react-native-android-image-polyfill-1.0.0.tgz#f0b61bac0c6a91b8f8f81233ab1998613adf64ac"
+
+react-native-auto-height-image@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-auto-height-image/-/react-native-auto-height-image-0.4.1.tgz#fd5bee549878f77af7b84cd5dcce4758e2a56f59"
   dependencies:
     prop-types "^15.5.8"
+    react-native-android-image-polyfill "^1.0.0"
 
 react-native-branch@2.0.0-beta.3:
   version "2.0.0-beta.3"

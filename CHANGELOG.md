@@ -2,11 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-<a name="0.4.1"></a>
-## [0.4.1](https://github.com/vivaxy/react-native-auto-height-image/compare/v0.4.0...v0.4.1) (2018-01-18)
-
-
-
 <a name="0.4.0"></a>
 # [0.4.0](https://github.com/vivaxy/react-native-auto-height-image/compare/v0.3.4...v0.4.0) (2018-01-16)
 
@@ -21,9 +16,19 @@ All notable changes to this project will be documented in this file. See [standa
 ## [0.3.4](https://github.com/vivaxy/react-native-auto-height-image/compare/v0.3.3...v0.3.4) (2017-12-20)
 
 
+### Features
+
+* Update image size on width change. ([7a09dc0](https://github.com/vivaxy/react-native-auto-height-image/commit/7a09dc0))
+
+
 
 <a name="0.3.3"></a>
 ## [0.3.3](https://github.com/vivaxy/react-native-auto-height-image/compare/v0.3.2...v0.3.3) (2017-08-22)
+
+
+### Features
+
+* Optimize error handling from `Image.getSize`. ([80158e7](https://github.com/vivaxy/react-native-auto-height-image/commit/80158e7))
 
 
 
@@ -41,6 +46,11 @@ All notable changes to this project will be documented in this file. See [standa
 ## [0.3.1](https://github.com/vivaxy/react-native-auto-height-image/compare/v0.3.0...v0.3.1) (2017-08-08)
 
 
+### Bug Fixes
+
+* :bug:Fixed syntax error in index.js. ([c384cd6](https://github.com/vivaxy/react-native-auto-height-image/commit/c384cd6))
+
+
 
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/vivaxy/react-native-auto-height-image/compare/v0.2.2...v0.3.0) (2017-07-31)
@@ -54,6 +64,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 <a name="0.2.2"></a>
 ## [0.2.2](https://github.com/vivaxy/react-native-auto-height-image/compare/v0.2.1...v0.2.2) (2017-05-27)
+
+
+### Documents
+
+* Update documents.
 
 
 

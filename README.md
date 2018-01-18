@@ -91,3 +91,9 @@ Other image props except `resizeMode` are accepted.
 ## Licence
 
 [MIT](./LICENSE)
+
+## Contributors
+
+| [![vivaxy](https://github.com/vivaxy.png?size=100)](https://github.com/vivaxy) | [![Tom Bailey](https://github.com/tombailey.png?size=100)](https://github.com/tombailey)     | [![Levi Serebryanski](https://github.com/levsero.png?size=100)](https://github.com/levsero)   | [![Matt Hamil](https://github.com/matthamil.png?size=100)](https://github.com/matthamil)   |
+| ---                                                                            | ---                                                                                          | ---                                                                                           | ---                                                                                           |
+| [vivaxy](https://github.com/vivaxy)                                            | [Tom Bailey](https://github.com/tombailey)                                                   | [Levi Serebryanski](https://github.com/levsero)                                               | [Matt Hamil](https://github.com/matthamil)                                               |
