@@ -18,7 +18,7 @@ import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource'
  */
 const cache = new Map();
 
-const getImageSizeFromCache = (image) => {
+const getImageSizeFromCache = image => {
     if (typeof image === 'number') {
         return cache.get(image);
     } else {
@@ -26,17 +26,21 @@ const getImageSizeFromCache = (image) => {
     }
 };
 
-const loadImageSize = (image) => {
+const loadImageSize = image => {
     return new Promise((resolve, reject) => {
         //number indicates import X or require(X) was used (i.e. local file)
         if (typeof image === 'number') {
             const { width, height } = resolveAssetSource(image);
             resolve({ width, height });
         } else {
-            Image.getSize(image.uri, (width, height) => {
-                // success
-                resolve({ width, height });
-            }, reject);
+            Image.getSize(
+                image.uri,
+                (width, height) => {
+                    // success
+                    resolve({ width, height });
+                },
+                reject
+            );
         }
     });
 };
@@ -50,7 +54,7 @@ export const getImageSizeFitWidthFromCache = (image, toWidth) => {
     return {};
 };
 
-const getImageSizeMaybeFromCache = async(image) => {
+const getImageSizeMaybeFromCache = async image => {
     let size = getImageSizeFromCache(image);
     if (!size) {
         size = await loadImageSize(image);
@@ -59,7 +63,7 @@ const getImageSizeMaybeFromCache = async(image) => {
     return size;
 };
 
-export const getImageSizeFitWidth = async(image, toWidth) => {
+export const getImageSizeFitWidth = async (image, toWidth) => {
     const { width, height } = await getImageSizeMaybeFromCache(image);
     return { width: toWidth, height: toWidth * height / width };
 };

@@ -15,15 +15,14 @@ import { NOOP, DEFAULT_HEIGHT } from './helpers';
 const { resizeMode, ...ImagePropTypes } = Image.propTypes;
 
 export default class AutoHeightImage extends PureComponent {
-
     static propTypes = {
         ...ImagePropTypes,
         width: PropTypes.number.isRequired,
-        onHeightChange: PropTypes.func,
+        onHeightChange: PropTypes.func
     };
 
     static defaultProps = {
-        onHeightChange: NOOP,
+        onHeightChange: NOOP
     };
 
     constructor(props) {
@@ -46,7 +45,10 @@ export default class AutoHeightImage extends PureComponent {
 
     setInitialImageHeight() {
         const { source, width, onHeightChange } = this.props;
-        const { height = DEFAULT_HEIGHT } = getImageSizeFitWidthFromCache(source, width);
+        const { height = DEFAULT_HEIGHT } = getImageSizeFitWidthFromCache(
+            source,
+            width
+        );
         this.state = { height };
         this.styles = StyleSheet.create({ image: { width, height } });
         onHeightChange(height);

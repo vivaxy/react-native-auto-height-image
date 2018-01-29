@@ -5,12 +5,11 @@ import { StyleSheet, Text, ScrollView, TextInput } from 'react-native';
 import image from './image.png';
 
 export default class App extends Component {
-
     state = {
-        dynamicWidth: 200,
+        dynamicWidth: 200
     };
 
-    handleTextInputChange = (text) => {
+    handleTextInputChange = text => {
         const width = Number(text);
         if (!Number.isNaN(width)) {
             this.setState({ dynamicWidth: width });
@@ -20,7 +19,10 @@ export default class App extends Component {
     render() {
         const { dynamicWidth } = this.state;
         return (
-            <ScrollView style={styles.scrollViewContainer} contentContainerStyle={styles.scrollViewContentContainer}>
+            <ScrollView
+                style={styles.scrollViewContainer}
+                contentContainerStyle={styles.scrollViewContentContainer}
+            >
                 <TextInput
                     value={String(dynamicWidth)}
                     keyboardType="numeric"
@@ -33,25 +35,19 @@ export default class App extends Component {
                     source={{ uri: 'http://placehold.it/350x150' }}
                 />
                 <Text>Basic example with local image</Text>
-                <AutoHeightImage
-                    width={100}
-                    source={image}
-                />
+                <AutoHeightImage width={100} source={image} />
                 <Text>Basic example with dynamic width</Text>
                 <AutoHeightImage
                     width={dynamicWidth}
                     source={{ uri: 'http://placehold.it/350x150' }}
                 />
                 <Text>Basic example with dynamic width and local image</Text>
-                <AutoHeightImage
-                    width={dynamicWidth}
-                    source={image}
-                />
+                <AutoHeightImage width={dynamicWidth} source={image} />
                 <Text>Wrong image</Text>
                 <AutoHeightImage
                     width={100}
                     source={{ uri: 'https://vivaxy.github.io/404' }}
-                    onError={(error) => {
+                    onError={error => {
                         console.log('----- onError', error);
                     }}
                 />
@@ -60,7 +56,7 @@ export default class App extends Component {
                     width={100}
                     source={{ uri: 'https://vivaxy.github.io/404' }}
                     fallbackSource={{ uri: 'http://placehold.it/350x150' }}
-                    onError={(error) => {
+                    onError={error => {
                         console.log('----- onError', error);
                     }}
                 />
@@ -69,7 +65,7 @@ export default class App extends Component {
                     width={100}
                     source={{ uri: 'https://vivaxy.github.io/404' }}
                     fallbackSource={image}
-                    onError={(error) => {
+                    onError={error => {
                         console.log('----- onError', error);
                     }}
                 />
@@ -82,17 +78,17 @@ const styles = StyleSheet.create({
     scrollViewContainer: {
         flex: 1,
         backgroundColor: '#fff',
-        marginTop: 20,
+        marginTop: 20
     },
     scrollViewContentContainer: {
         alignItems: 'center',
-        paddingTop: 100,
+        paddingTop: 100
     },
     textInputStyle: {
         width: 300,
         height: 30,
         borderStyle: 'solid',
         borderColor: '#eee',
-        borderWidth: 1,
-    },
+        borderWidth: 1
+    }
 });
