@@ -45,11 +45,12 @@ const loadImageSize = image => {
     });
 };
 
-export const getImageSizeFitWidthFromCache = (image, toWidth) => {
+export const getImageSizeFitWidthFromCache = (image, toWidth, maxHeight) => {
     const size = getImageSizeFromCache(image);
     if (size) {
         const { width, height } = size;
-        return { width: toWidth, height: toWidth * height / width };
+        let toHeight = toWidth * height / width;
+        return { width: toWidth, height: toHeight > maxHeight ? maxHeight : toHeight };
     }
     return {};
 };
@@ -63,7 +64,8 @@ const getImageSizeMaybeFromCache = async image => {
     return size;
 };
 
-export const getImageSizeFitWidth = async (image, toWidth) => {
+export const getImageSizeFitWidth = async (image, toWidth, maxHeight) => {
     const { width, height } = await getImageSizeMaybeFromCache(image);
-    return { width: toWidth, height: toWidth * height / width };
+    let toHeight = toWidth * height / width;
+    return { width: toWidth, height: toHeight > maxHeight ? maxHeight : toHeight };
 };
