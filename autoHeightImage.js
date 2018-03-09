@@ -44,10 +44,11 @@ export default class AutoHeightImage extends PureComponent {
     }
 
     setInitialImageHeight() {
-        const { source, width, onHeightChange } = this.props;
+        const { source, width, onHeightChange, maxHeight } = this.props;
         const { height = DEFAULT_HEIGHT } = getImageSizeFitWidthFromCache(
             source,
-            width
+            width,
+            maxHeight
         );
         this.state = { height };
         this.styles = StyleSheet.create({ image: { width, height } });
@@ -60,9 +61,9 @@ export default class AutoHeightImage extends PureComponent {
             this.props.width !== props.width
         ) {
             // image height could not be `0`
-            const { source, width, onHeightChange } = props;
+            const { source, width, onHeightChange, maxHeight } = props;
             try {
-                const { height } = await getImageSizeFitWidth(source, width);
+                const { height } = await getImageSizeFitWidth(source, width, maxHeight);
                 this.styles = StyleSheet.create({ image: { width, height } });
                 if (this.hasMounted) {
                     // guard `this.setState` to be valid
