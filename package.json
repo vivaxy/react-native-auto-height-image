@@ -4,6 +4,7 @@
   "gtScaffoldVersion": "0.1.0",
   "description": "react-native auto height image",
   "main": "./index.js",
+  "typings": "./index.d.ts",
   "scripts": {
     "release": "standard-version && git push --follow-tags && npm publish --registry=https://registry.npmjs.org/",
     "precommit": "lint-staged"
