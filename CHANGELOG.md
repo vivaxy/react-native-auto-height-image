@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* **trailing comma:** :bug: ([89713a5](https://github.com/vivaxy/react-native-auto-height-image/commit/89713a5))
+* :bug:Remove trailing comma ([89713a5](https://github.com/vivaxy/react-native-auto-height-image/commit/89713a5))
 
 
 
