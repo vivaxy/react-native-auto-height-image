@@ -28,23 +28,23 @@ import AutoHeightImage from 'react-native-auto-height-image';
 import image from 'gallifrey-falls.png';
 
 export default class Demo extends Component {
-    render() {
-        return (
-            <View>
+  render() {
+    return (
+      <View>
 
-                <AutoHeightImage
-                    width={100}
-                    source={image}
-                />
+        <AutoHeightImage
+          width={100}
+          source={image}
+        />
 
-                <AutoHeightImage
-                    width={100}
-                    source={{uri: 'http://placehold.it/350x150'}}
-                />
+        <AutoHeightImage
+          width={100}
+          source={{uri: 'http://placehold.it/350x150'}}
+        />
 
-            </View>
-        );
-    }
+      </View>
+    );
+  }
 }
 ```
 
@@ -57,15 +57,15 @@ import AutoHeightImage from 'react-native-auto-height-image';
 import image from 'gallifrey-falls.png';
 
 export default class Demo extends Component {
-    render() {
-        return (
-            <AutoHeightImage
-                width={100}
-                source={{uri: 'https://vivaxy.github.io/404'}}
-                fallbackSource={image}
-            />
-        );
-    }
+  render() {
+    return (
+      <AutoHeightImage
+        width={100}
+        source={{uri: 'https://vivaxy.github.io/404'}}
+        fallbackSource={image}
+      />
+    );
+  }
 }
 ```
 
@@ -94,6 +94,6 @@ Other image props except `resizeMode` are accepted.
 
 ## Contributors
 
-| [![vivaxy](https://github.com/vivaxy.png?size=100)](https://github.com/vivaxy) | [![Emerson Laurentino](https://github.com/emersonlaurentino.png?size=100)](https://github.com/emersonlaurentino) | [![Tom Bailey](https://github.com/tombailey.png?size=100)](https://github.com/tombailey)     | [![Levi Serebryanski](https://github.com/levsero.png?size=100)](https://github.com/levsero)   | [![Matt Hamil](https://github.com/matthamil.png?size=100)](https://github.com/matthamil)   |
-| ---                                                                            | ---                                                                                                              | ---                                                                                          | ---                                                                                           | ---                                                                                           |
-| [vivaxy](https://github.com/vivaxy)                                            | [Emerson Laurentino](https://github.com/emersonlaurentino)                                                       | [Tom Bailey](https://github.com/tombailey)                                                   | [Levi Serebryanski](https://github.com/levsero)                                               | [Matt Hamil](https://github.com/matthamil)                                               |
+| [![vivaxy](https://github.com/vivaxy.png?size=100)](https://github.com/vivaxy) | [![Emerson Laurentino](https://github.com/emersonlaurentino.png?size=100)](https://github.com/emersonlaurentino) | [![Sankaran Kaliappan](https://github.com/hisankaran.png?size=100)](https://github.com/hisankaran)  | [![Tom Bailey](https://github.com/tombailey.png?size=100)](https://github.com/tombailey)     | [![Levi Serebryanski](https://github.com/levsero.png?size=100)](https://github.com/levsero)   | [![Matt Hamil](https://github.com/matthamil.png?size=100)](https://github.com/matthamil)   |
+| ---                                                                            | ---                                                                                                              | ---                                                                                                 | ---                                                                                          | ---                                                                                           | ---                                                                                           |
+| [vivaxy](https://github.com/vivaxy)                                            | [Emerson Laurentino](https://github.com/emersonlaurentino)                                                       | [Sankaran Kaliappan](https://github.com/hisankaran)                                                 | [Tom Bailey](https://github.com/tombailey)                                                   | [Levi Serebryanski](https://github.com/levsero)                                               | [Matt Hamil](https://github.com/matthamil)                                               |

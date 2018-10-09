@@ -38,7 +38,7 @@
     "react-native": "*"
   },
   "lint-staged": {
-    "**/**.{js,json,pcss,md}": [
+    "**/**.{js,json,pcss,md,ts}": [
       "prettier --write",
       "git add"
     ]
