@@ -18,11 +18,11 @@ export default class AutoHeightImage extends PureComponent {
   static propTypes = {
     ...ImagePropTypes,
     width: PropTypes.number.isRequired,
-    onHeightChange: PropTypes.func,
+    onHeightChange: PropTypes.func
   };
 
   static defaultProps = {
-    onHeightChange: NOOP,
+    onHeightChange: NOOP
   };
 
   constructor(props) {

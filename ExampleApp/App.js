@@ -6,7 +6,7 @@ import image from './image.png';
 
 export default class App extends Component {
   state = {
-    dynamicWidth: 200,
+    dynamicWidth: 200
   };
 
   handleTextInputChange = (text) => {
@@ -78,17 +78,17 @@ const styles = StyleSheet.create({
   scrollViewContainer: {
     flex: 1,
     backgroundColor: '#fff',
-    marginTop: 20,
+    marginTop: 20
   },
   scrollViewContentContainer: {
     alignItems: 'center',
-    paddingTop: 100,
+    paddingTop: 100
   },
   textInputStyle: {
     width: 300,
     height: 30,
     borderStyle: 'solid',
     borderColor: '#eee',
-    borderWidth: 1,
-  },
+    borderWidth: 1
+  }
 });
