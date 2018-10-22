@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file. See [standa
 ## [1.0.5](https://github.com/vivaxy/react-native-auto-height-image/compare/v1.0.4...v1.0.5) (2018-10-22)
 
 
+### Bug Fixes
+
+* :bug:Fix updating the image size after change of the source ([cfe1566](https://github.com/vivaxy/react-native-auto-height-image/commit/cfe1566))
+
+
 
 <a name="1.0.4"></a>
 ## [1.0.4](https://github.com/vivaxy/react-native-auto-height-image/compare/v1.0.3...v1.0.4) (2018-10-09)
