@@ -30,7 +30,7 @@ export default class AutoHeightImage extends PureComponent {
     this.setInitialImageHeight();
   }
 
-  updateMarker = null
+  updateSequence = 0;
 
   async componentDidMount() {
     this.hasMounted = true;
@@ -43,6 +43,8 @@ export default class AutoHeightImage extends PureComponent {
 
   componentWillUnmount() {
     this.hasMounted = false;
+    // clear memory usage
+    this.updateSequence = null;
   }
 
   setInitialImageHeight() {
@@ -65,11 +67,11 @@ export default class AutoHeightImage extends PureComponent {
       // image height could not be `0`
       const { source, width, onHeightChange } = props;
       try {
-        const safeMarker = Math.random()
-        this.updateMarker = safeMarker
+        const updateSequence = ++this.updateSequence;
         const { height } = await getImageSizeFitWidth(source, width);
-        const currentMarker = this.updateMarker
-        if (safeMarker && safeMarker !== currentMarker) return
+        if (updateSequence !== this.updateSequence) {
+          return;
+        }
 
         this.styles = StyleSheet.create({ image: { width, height } });
         if (this.hasMounted) {

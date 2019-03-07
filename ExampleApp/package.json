@@ -1,27 +1,26 @@
 {
-  "name": "ExampleApp",
+  "name": "example-app",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "jest-expo": "23.0.0",
-    "react-native-scripts": "1.8.1",
-    "react-test-renderer": "16.0.0"
+    "jest-expo": "^32.0.0",
+    "react-test-renderer": "^16.8.4"
   },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
+    "start": "expo start",
+    "eject": "expo eject",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "test": "jest"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
-    "expo": "^23.0.4",
-    "react": "16.0.0",
-    "react-native": "0.50.3",
-    "react-native-auto-height-image": "^1.0.0"
+    "expo": "^32.0.0",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-auto-height-image": "^1.0.5"
   }
 }

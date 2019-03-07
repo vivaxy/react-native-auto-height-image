@@ -29,8 +29,8 @@
     "husky": "^0.14.3",
     "lint-staged": "^6.1.0",
     "prettier": "^1.10.2",
-    "react": "16.0.0-alpha.6",
-    "react-native": "^0.43.4",
+    "react": "^16.8.4",
+    "react-native": "0.58.6",
     "standard-version": "^4.0.0"
   },
   "peerDependencies": {
