@@ -16,7 +16,9 @@
   "keywords": [
     "react-native",
     "image",
-    "auto-height"
+    "auto-height",
+    "react",
+    "images"
   ],
   "author": "vivaxy",
   "license": "MIT",
