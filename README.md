@@ -2,7 +2,7 @@
 
 Initialized by [vivaxy/gt-npm-package](https://github.com/vivaxy/gt-npm-package)
 
-[![NPM Version](http://img.shields.io/npm/v/react-native-auto-height-image.svg?style=flat-square)](https://www.npmjs.com/package/react-native-auto-height-image)
+[![Financial Contributors on Open Collective](https://opencollective.com/react-native-auto-height-image/all/badge.svg?label=financial+contributors)](https://opencollective.com/react-native-auto-height-image) [![NPM Version](http://img.shields.io/npm/v/react-native-auto-height-image.svg?style=flat-square)](https://www.npmjs.com/package/react-native-auto-height-image)
 [![NPM Downloads](https://img.shields.io/npm/dt/react-native-auto-height-image.svg?style=flat-square)](https://www.npmjs.com/package/react-native-auto-height-image)
 [![MIT License](https://img.shields.io/npm/l/react-native-auto-height-image.svg?style=flat-square)](./LICENSE)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
@@ -95,3 +95,33 @@ Other image props except `resizeMode` are accepted.
 ## Contributors
 
 [Contributors](https://github.com/vivaxy/react-native-auto-height-image/graphs/contributors)
+
+## Contributors
+
+### Code Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="https://github.com/vivaxy/react-native-auto-height-image/graphs/contributors"><img src="https://opencollective.com/react-native-auto-height-image/contributors.svg?width=890&button=false" /></a>
+
+### Financial Contributors
+
+Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/react-native-auto-height-image/contribute)]
+
+#### Individuals
+
+<a href="https://opencollective.com/react-native-auto-height-image"><img src="https://opencollective.com/react-native-auto-height-image/individuals.svg?width=890"></a>
+
+#### Organizations
+
+Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/react-native-auto-height-image/contribute)]
+
+<a href="https://opencollective.com/react-native-auto-height-image/organization/0/website"><img src="https://opencollective.com/react-native-auto-height-image/organization/0/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-auto-height-image/organization/1/website"><img src="https://opencollective.com/react-native-auto-height-image/organization/1/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-auto-height-image/organization/2/website"><img src="https://opencollective.com/react-native-auto-height-image/organization/2/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-auto-height-image/organization/3/website"><img src="https://opencollective.com/react-native-auto-height-image/organization/3/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-auto-height-image/organization/4/website"><img src="https://opencollective.com/react-native-auto-height-image/organization/4/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-auto-height-image/organization/5/website"><img src="https://opencollective.com/react-native-auto-height-image/organization/5/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-auto-height-image/organization/6/website"><img src="https://opencollective.com/react-native-auto-height-image/organization/6/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-auto-height-image/organization/7/website"><img src="https://opencollective.com/react-native-auto-height-image/organization/7/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-auto-height-image/organization/8/website"><img src="https://opencollective.com/react-native-auto-height-image/organization/8/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-auto-height-image/organization/9/website"><img src="https://opencollective.com/react-native-auto-height-image/organization/9/avatar.svg"></a>
