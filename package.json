@@ -7,8 +7,7 @@
   "typings": "./index.d.ts",
   "scripts": {
     "release": "standard-version && git push --follow-tags && npm publish --registry=https://registry.npmjs.org/",
-    "precommit": "lint-staged",
-    "postinstall": "opencollective-postinstall || true"
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -25,7 +24,6 @@
   "license": "MIT",
   "bugs": {},
   "dependencies": {
-    "opencollective-postinstall": "^2.0.2",
     "prop-types": "^15.5.8",
     "react-native-android-image-polyfill": "^1.0.0"
   },
@@ -46,9 +44,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/react-native-auto-height-image"
   }
 }
