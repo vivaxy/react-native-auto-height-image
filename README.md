@@ -95,10 +95,6 @@ Other image props except `resizeMode` are accepted.
 
 ## Contributors
 
-[Contributors](https://github.com/vivaxy/react-native-auto-height-image/graphs/contributors)
-
-## Contributors
-
 ### Code Contributors
 
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
