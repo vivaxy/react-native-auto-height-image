@@ -15,3 +15,11 @@
 * Supply a proper test case and test your changes in ExampleApp.
 * Git commit with [Conventional Commits](https://conventionalcommits.org/).
 * Bump version and publish with `npm run release`. This will update `CHANGELOG.md` automatically.
+
+# How to release a beta/test version?
+
+* Run `yarn release:beta`.
+
+# How to release a stable version?
+
+* Run `yarn release`.
