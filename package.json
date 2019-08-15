@@ -6,9 +6,8 @@
   "main": "./index.js",
   "typings": "./index.d.ts",
   "scripts": {
-    "release": "standard-version && git push --follow-tags && npm publish --registry=https://registry.npmjs.org/",
-    "release:beta": "standard-version --prerelease beta && git push --follow-tags && npm publish --registry=https://registry.npmjs.org/",
-    "precommit": "lint-staged"
+    "release": "standard-version && git push --follow-tags && npm publish",
+    "release:beta": "standard-version --prerelease beta && git push --follow-tags && npm publish"
   },
   "repository": {
     "type": "git",
@@ -23,27 +22,44 @@
   ],
   "author": "vivaxy",
   "license": "MIT",
-  "bugs": {},
   "dependencies": {
-    "prop-types": "^15.5.8",
+    "prop-types": "^15.7.2",
     "react-native-android-image-polyfill": "^1.0.0"
   },
   "devDependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^6.1.0",
-    "prettier": "^1.10.2",
-    "react": "^16.8.4",
-    "react-native": "0.58.6",
-    "standard-version": "^4.0.0"
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "husky": "^3.0.3",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.18.2",
+    "react": "^16.9.0",
+    "react-native": "^0.60.5",
+    "standard-version": "^7.0.0"
   },
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
   },
   "lint-staged": {
-    "**/**.{js,json,pcss,md,ts}": [
+    "**/**.{js,json,md,ts}": [
       "prettier --write",
       "git add"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "none",
+    "arrowParens": "always"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   }
 }

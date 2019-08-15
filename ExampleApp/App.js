@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import AutoHeightImage from 'react-native-auto-height-image';
 import { StyleSheet, Text, ScrollView, TextInput } from 'react-native';
 
-import image from './image.png';
+import image from './assets/image.png';
 
 export default class App extends Component {
   state = {

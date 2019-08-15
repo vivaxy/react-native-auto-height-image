@@ -1,26 +1,22 @@
 {
-  "name": "example-app",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "jest-expo": "^32.0.0",
-    "react-test-renderer": "^16.8.4"
-  },
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
-    "eject": "expo eject",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "test": "jest"
-  },
-  "jest": {
-    "preset": "jest-expo"
+    "web": "expo start --web",
+    "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^32.0.0",
-    "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-native-auto-height-image": "^1.0.5"
-  }
+    "expo": "^34.0.1",
+    "react": "16.8.3",
+    "react-dom": "^16.8.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
+    "react-native-auto-height-image": "^1.1.1",
+    "react-native-web": "^0.11.4"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "^6.0.0"
+  },
+  "private": true
 }
