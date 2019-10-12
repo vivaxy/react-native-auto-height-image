@@ -1,6 +1,13 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.1.2](https://github.com/vivaxy/react-native-auto-height-image/compare/v1.1.1...v1.1.2) (2019-10-12)
+
+
+### Bug Fixes
+
+* for rn warning on componentWillReceiveProps ([b4d194d](https://github.com/vivaxy/react-native-auto-height-image/commit/b4d194d))
 
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/vivaxy/react-native-auto-height-image/compare/v1.1.0...v1.1.1) (2019-08-13)
