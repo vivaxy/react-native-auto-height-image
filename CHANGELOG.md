@@ -1,6 +1,17 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [2.0.0](https://github.com/vivaxy/react-native-auto-height-image/compare/v1.1.3...v2.0.0) (2020-01-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* incorporated imagepolyfill in codebase, removed from deps
+
+### Features
+
+* incorporated imagepolyfill in codebase, removed from deps ([bfdca6f](https://github.com/vivaxy/react-native-auto-height-image/commit/bfdca6f))
 
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/vivaxy/react-native-auto-height-image/compare/v1.1.2...v1.1.3) (2019-10-16)
