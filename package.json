@@ -23,8 +23,7 @@
   "author": "vivaxy",
   "license": "MIT",
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "react-native-android-image-polyfill": "^1.0.0"
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",

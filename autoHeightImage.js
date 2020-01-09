@@ -4,8 +4,8 @@
  */
 
 import React, { PureComponent } from 'react';
-import Image from 'react-native-android-image-polyfill';
-import { StyleSheet } from 'react-native';
+import ImagePolyfill from './imagePolyfill';
+import { StyleSheet, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { getImageSizeFitWidth, getImageSizeFitWidthFromCache } from './cache';
@@ -90,8 +90,11 @@ export default class AutoHeightImage extends PureComponent {
   render() {
     // remove `width` prop from `restProps`
     const { source, style, width, ...restProps } = this.props;
+
+    // since it only makes sense to use polyfill when dealing with remote images
+    const ImageComponent = source.uri ? ImagePolyfill : Image;
     return (
-      <Image
+      <ImageComponent
         source={source}
         style={[this.styles.image, style]}
         {...restProps}
