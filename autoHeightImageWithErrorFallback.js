@@ -12,7 +12,7 @@ function ErrorableImage(props) {
   return (
     <AutoHeightImage
       source={shouldUseFallbackSource ? fallbackSource : source}
-      onError={(error) => {
+      onError={(_e) => {
         // if an error hasn't already been seen, try to load the error image
         // instead
         if (!error) {
@@ -20,7 +20,7 @@ function ErrorableImage(props) {
         }
 
         // also propagate to error handler if it is specified
-        onError && onError(error);
+        onError && onError(_e);
       }}
       {...rest}
     />
