@@ -36,8 +36,8 @@
     "standard-version": "^7.0.0"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
+    "react": "^16.8.0",
+    "react-native": "^0.59.0"
   },
   "lint-staged": {
     "**/**.{js,json,md,ts}": [
