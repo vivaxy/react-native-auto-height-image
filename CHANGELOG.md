@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/vivaxy/react-native-auto-height-image/compare/v2.0.0...v3.0.0) (2020-01-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* **changelog:** Drop support for react before 16.8 and react-native before 0.59
+
+* **changelog:** :memo: commit a breaking change ([03c9b81](https://github.com/vivaxy/react-native-auto-height-image/commit/03c9b81))
+
+
+### Bug Fixes
+
+* fix for fallback images ([d825375](https://github.com/vivaxy/react-native-auto-height-image/commit/d825375))
+
+
+### Features
+
+* **deps:** bumped React to ^16.8 & React Native to ^0.59.0 ([24edbc2](https://github.com/vivaxy/react-native-auto-height-image/commit/24edbc2))
+
 ## [2.0.0](https://github.com/vivaxy/react-native-auto-height-image/compare/v1.1.3...v2.0.0) (2020-01-09)
 
 
