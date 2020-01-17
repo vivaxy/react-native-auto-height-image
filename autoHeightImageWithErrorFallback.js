@@ -1,36 +1,30 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 import AutoHeightImage from './autoHeightImage';
 
-export default class ErrorableImage extends Component {
-  static propTypes = {
-    ...AutoHeightImage.propTypes,
-    fallbackSource: AutoHeightImage.propTypes.source
-  };
+function ErrorableImage(props) {
+  const { source, fallbackSource, onError, ...rest } = props;
 
-  state = { error: false };
+  const [error, setError] = useState(false);
 
-  render() {
-    const { source, fallbackSource, onError, ...restProps } = this.props;
+  const shouldUseFallbackSource = error && fallbackSource;
 
-    const shouldUseFallbackSource = this.state.error && fallbackSource;
-    return (
-      <AutoHeightImage
-        source={shouldUseFallbackSource ? fallbackSource : source}
-        onError={(error) => {
-          // if an error hasn't already been seen, try to load the error image
-          // instead
-          if (!this.state.error) {
-            this.setState({ error: true });
-          }
+  return (
+    <AutoHeightImage
+      source={shouldUseFallbackSource ? fallbackSource : source}
+      onError={(_e) => {
+        // if an error hasn't already been seen, try to load the error image
+        // instead
+        if (!error) {
+          setError(true);
+        }
 
-          // also propagate to error handler if it is specified
-          if (onError) {
-            onError(error);
-          }
-        }}
-        {...restProps}
-      />
-    );
-  }
+        // also propagate to error handler if it is specified
+        onError && onError(_e);
+      }}
+      {...rest}
+    />
+  );
 }
+
+export default ErrorableImage;
