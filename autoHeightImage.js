@@ -5,7 +5,7 @@
 
 import React, { useEffect, useState } from 'react';
 import ImagePolyfill from './imagePolyfill';
-import { Image } from 'react-native';
+import Image from './animatableImage';
 import PropTypes from 'prop-types';
 
 import { getImageSizeFitWidth } from './cache';
@@ -39,11 +39,13 @@ function AutoHeightImage(props) {
 AutoHeightImage.propTypes = {
   ...ImagePropTypes,
   width: PropTypes.number.isRequired,
-  onHeightChange: PropTypes.func
+  onHeightChange: PropTypes.func,
+  animated: PropTypes.bool
 };
 
 AutoHeightImage.defaultProps = {
-  onHeightChange: NOOP
+  onHeightChange: NOOP,
+  animated: false
 };
 
 export default AutoHeightImage;
