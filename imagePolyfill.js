@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { Image, Platform } from 'react-native';
+import { Platform } from 'react-native';
+import Image from './animatableImage';
 
 const isAndroid = () => Platform.OS === 'android';
 

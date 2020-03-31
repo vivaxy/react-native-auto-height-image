@@ -10,6 +10,7 @@ export interface AutoHeightImageProps extends ImageProps {
   width: number;
   fallbackSource?: number | TSource;
   onHeightChange?: (height: number) => void;
+  animated: boolean;
 }
 
 declare class AutoHeightImage extends React.Component<
