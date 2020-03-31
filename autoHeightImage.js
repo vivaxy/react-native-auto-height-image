@@ -2,7 +2,6 @@
  * @since 2017-04-11 19:10:08
  * @author vivaxy
  */
-
 import React, { useEffect, useState } from 'react';
 import ImagePolyfill from './imagePolyfill';
 import Image from './animatableImage';

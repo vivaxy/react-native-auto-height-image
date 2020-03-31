@@ -77,7 +77,8 @@ export default class Demo extends Component {
 | `width`            | number           | ✔             | N/A               | image width to fit                                                    |
 | `source`           | number or object | ✔             | N/A               | local (i.e. require/import) or remote image ({uri: '...'})            |
 | `fallbackSource`   | number or object | ✖             | N/A               | local (i.e. require/import) or remote image ({uri: '...'})            |
-| `onHeightChange`   | func             | ✖             | (height) => {}    | called when updating image height, the argument `height` might be `0` |
+| `onHeightChange`   | func             | ✖             | `(height) => {}`    | called when updating image height, the argument `height` might be `0` |
+| `animated`        | bool              | ✖              | `false`               | Use `Animated.Image` instead of `Image` |
 
 Other image props except `resizeMode` are accepted.
 
