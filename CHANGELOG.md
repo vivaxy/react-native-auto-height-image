@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.1](https://github.com/vivaxy/react-native-auto-height-image/compare/v3.1.0...v3.1.1) (2020-04-04)
+
+
+### Bug Fixes
+
+* android crash at imagePolyfill ([21dc084](https://github.com/vivaxy/react-native-auto-height-image/commit/21dc0841c452a4178202db1beedfc7e2e72d7665))
+
 ## [3.1.0](https://github.com/vivaxy/react-native-auto-height-image/compare/v3.0.0...v3.1.0) (2020-03-31)
 
 
