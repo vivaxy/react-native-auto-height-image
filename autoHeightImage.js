@@ -4,14 +4,14 @@
  */
 import React, { useEffect, useState } from 'react';
 import ImagePolyfill from './imagePolyfill';
-import Image from './animatableImage';
+import AnimatableImage from './animatableImage';
 import PropTypes from 'prop-types';
 
 import { getImageSizeFitWidth } from './cache';
 import { NOOP, DEFAULT_HEIGHT } from './helpers';
 
 // remove `resizeMode` props from `Image.propTypes`
-const { resizeMode, ...ImagePropTypes } = Image.propTypes;
+const { resizeMode, ...ImagePropTypes } = AnimatableImage.propTypes;
 
 function AutoHeightImage(props) {
   const { onHeightChange, source, width, style, ...rest } = props;
@@ -29,7 +29,7 @@ function AutoHeightImage(props) {
   const imageStyles = { width, height };
 
   // Since it only makes sense to use polyfill with remote images
-  const ImageComponent = source.uri ? ImagePolyfill : Image;
+  const ImageComponent = source.uri ? ImagePolyfill : AnimatableImage;
   return (
     <ImageComponent source={source} style={[imageStyles, style]} {...rest} />
   );

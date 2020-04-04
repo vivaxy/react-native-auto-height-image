@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Platform } from 'react-native';
-import Image from './animatableImage';
+import { Platform, Image } from 'react-native';
+import AnimatableImage from './animatableImage';
 
 const isAndroid = () => Platform.OS === 'android';
 
@@ -24,10 +24,10 @@ function ImagePolyfill(props) {
     }
   }, [source, onError]);
 
-  return <Image source={source} {...rest} />;
+  return <AnimatableImage source={source} {...rest} />;
 }
 
-ImagePolyfill.propTypes = Image.propTypes;
-ImagePolyfill.defaultProps = Image.defaultProps;
+ImagePolyfill.propTypes = AnimatableImage.propTypes;
+ImagePolyfill.defaultProps = AnimatableImage.defaultProps;
 
 export default ImagePolyfill;
