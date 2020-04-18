@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.2](https://github.com/vivaxy/react-native-auto-height-image/compare/v3.1.1...v3.1.2) (2020-04-18)
+
+
+### Bug Fixes
+
+* add missing symbol ([7498b82](https://github.com/vivaxy/react-native-auto-height-image/commit/7498b823bb8ac8a0f1f509fb0f083a61e57e192d))
+
 ### [3.1.1](https://github.com/vivaxy/react-native-auto-height-image/compare/v3.1.0...v3.1.1) (2020-04-04)
 
 
