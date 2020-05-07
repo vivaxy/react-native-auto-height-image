@@ -1,6 +1,6 @@
 {
   "name": "react-native-auto-height-image",
-  "version": "3.1.2",
+  "version": "3.1.3",
   "description": "react-native auto height image",
   "main": "./index.js",
   "typings": "./index.d.ts",
@@ -60,7 +60,10 @@
       "@commitlint/config-conventional"
     ],
     "rules": {
-      "header-max-length": [0, "never"]
+      "header-max-length": [
+        0,
+        "never"
+      ]
     }
   }
 }
