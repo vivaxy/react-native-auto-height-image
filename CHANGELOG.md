@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/vivaxy/react-native-auto-height-image/compare/v3.1.3...v3.2.0) (2020-05-27)
+
+
+### Features
+
+* :sparkles: support `maxHeight` prop, reuse image cache on initial rendering to optimize the performance ([e5055c8](https://github.com/vivaxy/react-native-auto-height-image/commit/e5055c8e97a800581d7049140392cdedad035f48))
+
 ### [3.1.3](https://github.com/vivaxy/react-native-auto-height-image/compare/v3.1.2...v3.1.3) (2020-05-07)
 
 
