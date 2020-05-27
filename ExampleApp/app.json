@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ExampleApp",
-    "slug": "ExampleApp",
+    "name": "ExampleApp for react-native-auto-height-image component",
+    "slug": "example-app-for-react-native-auto-height-image-component",
     "privacy": "public",
     "sdkVersion": "34.0.0",
     "platforms": [
@@ -25,6 +25,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "ExampleApp for react-native-auto-height-image component",
+    "githubUrl": "https://github.com/vivaxy/react-native-auto-height-image/tree/master/ExampleApp"
   }
 }

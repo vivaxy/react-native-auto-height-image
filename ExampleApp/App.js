@@ -39,6 +39,7 @@ export default class App extends Component {
         <Text>Basic example with dynamic width</Text>
         <AutoHeightImage
           width={dynamicWidth}
+          maxHeight={300}
           source={{ uri: 'http://placehold.it/350x150' }}
         />
         <Text>Basic example with dynamic width and local image</Text>

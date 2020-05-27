@@ -75,6 +75,7 @@ export default class Demo extends Component {
 | name               | type             | isRequired    | default           | description                                                           |
 | ---                | ---              | ---           | ---               | ---                                                                   |
 | `width`            | number           | ✔             | N/A               | image width to fit                                                    |
+| `maxHeight`            | number           | ✖             | `Infinity`               | image max height                                                    |
 | `source`           | number or object | ✔             | N/A               | local (i.e. require/import) or remote image ({uri: '...'})            |
 | `fallbackSource`   | number or object | ✖             | N/A               | local (i.e. require/import) or remote image ({uri: '...'})            |
 | `onHeightChange`   | func             | ✖             | `(height) => {}`    | called when updating image height, the argument `height` might be `0` |
