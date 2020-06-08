@@ -8,7 +8,7 @@ interface TSource {
 export interface AutoHeightImageProps extends ImageProps {
   source: number | TSource;
   width: number;
-  maxHeight: number;
+  maxHeight?: number;
   fallbackSource?: number | TSource;
   onHeightChange?: (height: number) => void;
   animated?: boolean;
