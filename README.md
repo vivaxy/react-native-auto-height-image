@@ -119,3 +119,4 @@ Support this project with your organization. Your logo will show up here with a 
 ## Related Projects
 
 - [react-native-scalable-image](https://github.com/ihor/react-native-scalable-image)
+- [react-native-fit-image](https://github.com/huiseoul/react-native-fit-image)
