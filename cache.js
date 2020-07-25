@@ -63,7 +63,11 @@ const getImageSizeMaybeFromCache = async (image) => {
   let size = getImageSizeFromCache(image);
   if (!size) {
     size = await loadImageSize(image);
-    cache.set(image, size);
+    if (typeof image === 'number') {
+      cache.set(image, size);
+    } else {
+      cache.set(image.uri, size);
+    }
   }
   return size;
 };
