@@ -2610,11 +2610,6 @@ dayjs@^1.8.15:
   resolved "https://registry.npmjs.org/dayjs/-/dayjs-1.8.36.tgz#be36e248467afabf8f5a86bae0de0cdceecced50"
   integrity sha512-3VmRXEtw7RZKAf+4Tv1Ym9AGeo8r8+CjDi26x+7SYQil1UqtqdaokhzoEJohqlzt0m5kacJSDhJQkG/LWhpRBw==
 
-debounce@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.2.0.tgz#44a540abc0ea9943018dc0eaa95cce87f65cd131"
-  integrity sha512-mYtLl1xfZLi1m4RtQYlZgJUNQjl4ZxVnHzIR8nLLgi4q1YT8o/WM+MK/f8yfcc9s5Ir5zRaPZyZU6xs1Syoocg==
-
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -5335,14 +5330,13 @@ react-native-safe-area-context@3.1.4:
   resolved "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-3.1.4.tgz#9b7f883a5ae8da6218d17467a350434005893602"
   integrity sha512-bXx3hqz4LovFoMnJIRGIWL2oJ/PHadXviBKvgZV9yNErtURQLJSn0yfQytVtiqslhaBMZOJwH4R6HiClyofvBg==
 
-react-native-web@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.npmjs.org/react-native-web/-/react-native-web-0.13.0.tgz#02ea5d2bcf06891b61596cd3f9492acffad0b1d9"
-  integrity sha512-u4d4LhgwAQ23fZxhq7yxhUUK8eGl0ER2C/qPHQVKo6dottqkI7b2HxWJtBpWklmY+Vtoo4yGN4m3w6SIyE4MDQ==
+react-native-web@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.npmjs.org/react-native-web/-/react-native-web-0.14.0.tgz#d8faf2218153930417172db69111eac77d441261"
+  integrity sha512-jz7li7lgjZ2rJeH9HLBpAtLDzD1LHfK7TcmsrBes3za4hl5+Qn3UtlKbhiT/lcNGd2IDCP13Gj9DEWTRg/auNA==
   dependencies:
     array-find-index "^1.0.2"
     create-react-class "^15.6.2"
-    debounce "^1.2.0"
     deep-assign "^3.0.0"
     fbjs "^1.0.0"
     hyphenate-style-name "^1.0.3"
