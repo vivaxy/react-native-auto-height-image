@@ -14,7 +14,7 @@
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
     "react-native-auto-height-image": "file:..",
-    "react-native-web": "^0.13.0"
+    "react-native-web": "^0.14.0"
   },
   "devDependencies": {
     "babel-preset-expo": "^8.0.0"
