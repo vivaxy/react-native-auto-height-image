@@ -3,12 +3,6 @@
     "name": "ExampleApp for react-native-auto-height-image component",
     "slug": "example-app-for-react-native-auto-height-image-component",
     "privacy": "public",
-    "sdkVersion": "34.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

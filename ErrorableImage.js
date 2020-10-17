@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import AutoHeightImage from './autoHeightImage';
+import AutoHeightImage from './AutoHeightImage';
 
 function ErrorableImage(props) {
   const { source, fallbackSource, onError, ...rest } = props;
