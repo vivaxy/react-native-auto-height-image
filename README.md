@@ -81,7 +81,7 @@ export default class Demo extends Component {
 | `onHeightChange`   | func             | ✖             | `(height) => {}`    | called when updating image height, the argument `height` might be `0` |
 | `animated`        | bool              | ✖              | `false`               | Use `Animated.Image` instead of `Image` |
 
-Other image props except `resizeMode` are accepted.
+Other [image props](https://reactnative.dev/docs/image#props) except `resizeMode` are accepted.
 
 ## Change Log
 
