@@ -4,7 +4,7 @@
  */
 import React, { useEffect, useState, useRef } from 'react';
 import ImagePolyfill from './imagePolyfill';
-import AnimatableImage from './animatableImage';
+import AnimatableImage from './AnimatableImage';
 import PropTypes from 'prop-types';
 
 import { getImageSizeFitWidth, getImageSizeFitWidthFromCache } from './cache';
@@ -14,7 +14,15 @@ import { NOOP, DEFAULT_HEIGHT } from './helpers';
 const { resizeMode, ...ImagePropTypes } = AnimatableImage.propTypes;
 
 function AutoHeightImage(props) {
-  const { onHeightChange, source, width, style, maxHeight, ...rest } = props;
+  const {
+    onHeightChange,
+    source,
+    width,
+    style,
+    maxHeight,
+    onError,
+    ...rest
+  } = props;
   const [height, setHeight] = useState(
     getImageSizeFitWidthFromCache(source, width, maxHeight).height ||
       DEFAULT_HEIGHT
@@ -31,16 +39,20 @@ function AutoHeightImage(props) {
   useEffect(
     function () {
       (async function () {
-        const { height: newHeight } = await getImageSizeFitWidth(
-          source,
-          width,
-          maxHeight
-        );
-        if (mountedRef.current) {
-          // might trigger `onHeightChange` with same `height` value
-          // dedupe maybe?
-          setHeight(newHeight);
-          onHeightChange(newHeight);
+        try {
+          const { height: newHeight } = await getImageSizeFitWidth(
+            source,
+            width,
+            maxHeight
+          );
+          if (mountedRef.current) {
+            // might trigger `onHeightChange` with same `height` value
+            // dedupe maybe?
+            setHeight(newHeight);
+            onHeightChange(newHeight);
+          }
+        } catch (e) {
+          onError(e);
         }
       })();
     },
@@ -53,7 +65,12 @@ function AutoHeightImage(props) {
   // Since it only makes sense to use polyfill with remote images
   const ImageComponent = source.uri ? ImagePolyfill : AnimatableImage;
   return (
-    <ImageComponent source={source} style={[imageStyles, style]} {...rest} />
+    <ImageComponent
+      source={source}
+      style={[imageStyles, style]}
+      onError={onError}
+      {...rest}
+    />
   );
 }
 

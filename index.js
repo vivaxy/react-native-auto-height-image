@@ -1,3 +1,3 @@
-import Image from './autoHeightImageWithErrorFallback';
+import ErrorableImage from './ErrorableImage';
 
-export default Image;
+export default ErrorableImage;
