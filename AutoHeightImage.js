@@ -3,7 +3,7 @@
  * @author vivaxy
  */
 import React, { useEffect, useState, useRef } from 'react';
-import ImagePolyfill from './imagePolyfill';
+import ImagePolyfill from './ImagePolyfill';
 import AnimatableImage from './AnimatableImage';
 import PropTypes from 'prop-types';
 
