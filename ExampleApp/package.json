@@ -9,7 +9,7 @@
     "postinstall": "rm -rf ./node_modules/react-native-auto-height-image/node_modules && rm -rf ./node_modules/react-native-auto-height-image/ExampleApp"
   },
   "dependencies": {
-    "expo": "~39.0.2",
+    "expo": "~40.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
