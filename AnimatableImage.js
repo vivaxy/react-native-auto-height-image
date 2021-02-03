@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Image, Animated } from 'react-native';
+import { ImageBackground, Animated } from 'react-native';
 
 function AnimatableImage(props) {
   const { animated, ...rest } = props;
 
-  const ImageComponent = animated ? Animated.Image : Image;
+  const ImageComponent = animated ? Animated.Image : ImageBackground;
 
   return <ImageComponent {...rest} />;
 }
 
 AnimatableImage.propTypes = {
-  ...Image.propTypes,
+  ...ImageBackground.propTypes,
   animated: PropTypes.bool
 };
 
