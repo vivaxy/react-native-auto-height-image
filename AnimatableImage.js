@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { ImageBackground, Animated } from 'react-native';
+import { Animated, Image, ImageBackground, Text } from 'react-native';
 
 function AnimatableImage(props) {
-  const { animated, ...rest } = props;
+  const { animated, children, ...rest } = props;
 
-  const ImageComponent = animated ? Animated.Image : ImageBackground;
+  const ImageComponent = children ? ImageBackground : animated ? Animated.Image : Image;
 
-  return <ImageComponent {...rest} />;
+  return <ImageComponent {...rest}>{children}</ImageComponent>;
 }
 
 AnimatableImage.propTypes = {
-  ...ImageBackground.propTypes,
+  ...Image.propTypes,
   animated: PropTypes.bool
 };
 
