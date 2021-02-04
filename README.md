@@ -6,8 +6,8 @@ Initialized by [vivaxy/gt-npm-package](https://github.com/vivaxy/gt-npm-package)
 [![NPM Downloads](https://img.shields.io/npm/dt/react-native-auto-height-image.svg?style=flat-square)](https://www.npmjs.com/package/react-native-auto-height-image)
 [![MIT License](https://img.shields.io/npm/l/react-native-auto-height-image.svg?style=flat-square)](./LICENSE)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
-[![Financial Contributors on Open Collective](https://opencollective.com/react-native-auto-height-image/all/badge.svg?label=financial+contributors)](https://opencollective.com/react-native-auto-height-image)
-[![Maintainers Wanted](https://img.shields.io/badge/maintainers-wanted-red.svg)](https://github.com/vivaxy/react-native-auto-height-image/issues/88)
+[![Financial Contributors on Open Collective](https://opencollective.com/react-native-auto-height-image/all/badge.svg?label=financial+contributors&style=flat-square)](https://opencollective.com/react-native-auto-height-image)
+[![Maintainers Wanted](https://img.shields.io/badge/maintainers-wanted-red.svg?style=flat-square)](https://github.com/vivaxy/react-native-auto-height-image/issues/88)
 
 This component provides you a simple way to load a remote image and automatically set `Image` height to the image dimension which fits the provided width.
 
