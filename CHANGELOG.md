@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.4](https://github.com/vivaxy/react-native-auto-height-image/compare/v3.2.3...v3.2.4) (2021-02-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency expo to v40 ([a99a92e](https://github.com/vivaxy/react-native-auto-height-image/commit/a99a92e7599172ba5ca1598c08cfee774374840b))
+* **deps:** update dependency react-native-web to ~0.14.0 ([3e038fd](https://github.com/vivaxy/react-native-auto-height-image/commit/3e038fd0cffe8ce1f4ce44b1ca0d562d3a58c253))
+* **deps:** update react monorepo to v16.14.0 ([3e20f8e](https://github.com/vivaxy/react-native-auto-height-image/commit/3e20f8efef470caa17e8cf4a23e096d281a41170))
+* **deps:** update react monorepo to v17.0.1 ([dbec1ff](https://github.com/vivaxy/react-native-auto-height-image/commit/dbec1ffb3f685a7992079f6bebe98e0b70a9355e))
+
 ### [3.2.3](https://github.com/vivaxy/react-native-auto-height-image/compare/v3.2.2...v3.2.3) (2020-10-17)
 
 
