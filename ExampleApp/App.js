@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import AutoHeightImage from 'react-native-auto-height-image';
-import { StyleSheet, Text, ScrollView, TextInput, Animated } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  ScrollView,
+  TextInput,
+  Animated
+} from 'react-native';
 
 import image from './assets/image.png';
 
@@ -20,12 +26,13 @@ export default class App extends Component {
   fadeIn = () => {
     Animated.timing(this.state.fadeAnim, {
       toValue: 1,
-      duration: 5000
+      duration: 5000,
+      useNativeDriver: true
     }).start();
   };
 
   componentDidMount() {
-    this.fadeIn()
+    this.fadeIn();
   }
 
   render() {
@@ -85,22 +92,31 @@ export default class App extends Component {
         <Text>AnimatableImage</Text>
         <AutoHeightImage
           width={dynamicWidth}
-          source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/1/18/React_Native_Logo.png' }}
+          source={{
+            uri:
+              'https://upload.wikimedia.org/wikipedia/commons/1/18/React_Native_Logo.png'
+          }}
           animated={true}
           style={[
             styles.fadingContainer,
             {
               opacity: this.state.fadeAnim
             }
-          ]} />
+          ]}
+        />
         <Text>ImageBackground</Text>
         <AutoHeightImage
           width={dynamicWidth}
-          source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/1/18/React_Native_Logo.png' }}
+          source={{
+            uri:
+              'https://upload.wikimedia.org/wikipedia/commons/1/18/React_Native_Logo.png'
+          }}
         >
-          <Text style={styles.textStyle}>You can make any Child Component!</Text>
+          <Text style={styles.textStyle}>
+            You can make any Child Component!
+          </Text>
         </AutoHeightImage>
-      </ScrollView >
+      </ScrollView>
     );
   }
 }
@@ -125,7 +141,7 @@ const styles = StyleSheet.create({
   fadingContainer: {
     paddingVertical: 8,
     paddingHorizontal: 16,
-    backgroundColor: "powderblue"
+    backgroundColor: 'powderblue'
   },
   textStyle: {
     color: 'white'
