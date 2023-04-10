@@ -1,0 +1,9 @@
+cff-version: 1.1.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Xu
+    given-names: Ye
+    orcid: https://doi.org/10.5281/zenodo.7813210
+title: vivaxy/react-native-auto-height-image
+version: v3.2.4
+date-released: 2023-04-10
